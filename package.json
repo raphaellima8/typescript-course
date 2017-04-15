@@ -1,0 +1,29 @@
+{
+  "name": "typescript-course",
+  "version": "1.0.0",
+  "description": "'API REST desenvolvida utilizando TypeScript'",
+  "main": "server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "API",
+    "TypeScript",
+    "Node",
+    "Postgres"
+  ],
+  "author": "Raphael Lima <raphael.aolima8@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "http": "0.0.0",
+    "morgan": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.3",
+    "@types/express": "^4.0.35",
+    "@types/morgan": "^1.7.32",
+    "mocha": "^3.2.0"
+  }
+}

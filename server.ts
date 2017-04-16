@@ -8,4 +8,4 @@ server.listen(3000, function() {
     console.log('Express está funcionando na porta 3000');
 });
 
-export default server;
+export default server; 

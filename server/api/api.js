@@ -8,5 +8,5 @@ api.use(morgan('dev'));
 api.use(bodyParser.urlencoded({ extended: true }));
 api.use(bodyParser.json());
 routes(api);
-exports.__esModule = true;
-exports["default"] = api;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = api;

@@ -4,6 +4,7 @@
   "description": "'API REST desenvolvida utilizando TypeScript'",
   "main": "server.ts",
   "scripts": {
+    "init": "NODE_ENV=development npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

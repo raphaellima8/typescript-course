@@ -3,11 +3,11 @@
         "target": "es5",
         "module": "commonjs",
         "typeRoots": [
-            "node_modules/@types"
+            "../node_modules/@types"
         ]
     },
     "include": [
-        "server.ts"
+        "server/**/*.ts"
     ],
     "exclude": [
         "node_modules"

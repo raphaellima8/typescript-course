@@ -1,17 +1,24 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "typeRoots": [
-            "../node_modules/@types"
-        ]
-    },
-    "include": [
-        "server/**/*.ts"
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "build",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "../node_modules/@types"
     ],
-    "exclude": [
-        "node_modules"
-    ],
-    "compileOnSave": true,
-    "buildOnSave": true
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "server/**/*.ts",
+    "server/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compileOnSave": true,
+  "buildOnSave": true
 }

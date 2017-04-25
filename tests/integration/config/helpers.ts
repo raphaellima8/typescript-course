@@ -1,7 +1,7 @@
 import * as mocha from 'mocha';
 import * as Chai from 'chai';
-const supertest = require('supertest');
 import * as td from 'testdouble';
+const supertest = require('supertest');
 import App from '../../../server/api/api';
 
 const app = App;

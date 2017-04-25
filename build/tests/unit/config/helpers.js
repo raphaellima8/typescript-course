@@ -1,7 +1,7 @@
 "use strict";
 var Chai = require("chai");
-var supertest = require('supertest');
 var td = require("testdouble");
+var supertest = require('supertest');
 var api_1 = require("../../../server/api/api");
 var app = api_1.default;
 exports.app = app;

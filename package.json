@@ -6,8 +6,8 @@
   "scripts": {
     "start": "NODE_ENV=development ./node_modules/.bin/ts-node ./server/server.ts",
     "builded": "NODE_ENV=development node ./build/server.js",
-    "unit-test": "NODE_ENV=test mocha --opts build/tests/unit/config/mocha.opts ./build/tests/unit/*.js",
-    "integration-test": "NODE_ENV=test mocha --opts build/tests/integration/config/mocha.opts ./build/tests/integration/*.js",
+    "unit-test": "NODE_ENV=test mocha --opts build/tests/unit/config/mocha.opts ./build/tests/unit/unit.test.js",
+    "integration-test": "NODE_ENV=test mocha --opts build/tests/integration/config/mocha.opts ./build/tests/integration/integration.test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -22,7 +22,9 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "http": "0.0.0",
-    "morgan": "^1.8.1"
+    "morgan": "^1.8.1",
+    "sequelize": "^3.30.4",
+    "sequelize-cli": "^2.7.0"
   },
   "devDependencies": {
     "@types/body-parser": "^1.16.3",

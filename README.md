@@ -1,4 +1,4 @@
-#TypeScript Course - Repositório para o código-fonte da API REST desenvolvida no curso [TypeScript na Prática - Criando aplicações Web com TypeScript]('https://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/?couponCode=GADW73OFF')
+# TypeScript Course - Repositório para o código-fonte da API REST desenvolvida no curso [TypeScript na Prática - Criando aplicações Web com TypeScript]('https://www.udemy.com/typescript-na-pratica-criando-aplicacoes-web-com-typescript/?couponCode=GADW73OFF')
 
 ## Começando...
 Clone este repositório:

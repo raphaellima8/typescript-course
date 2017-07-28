@@ -1,6 +1,6 @@
 "use strict";
-var routes_1 = require("../../modules/User/routes");
-var auth_1 = require("../../modules/auth/auth");
+var routes_1 = require('../../modules/User/routes');
+var auth_1 = require('../../modules/auth/auth');
 var Routes = (function () {
     function Routes(app, auth) {
         this.router = new routes_1.default();

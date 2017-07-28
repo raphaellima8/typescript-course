@@ -1,5 +1,5 @@
 "use strict";
-var controller_1 = require("./controller");
+var controller_1 = require('./controller');
 var UserCtrl;
 var UserRoutes = (function () {
     function UserRoutes() {

@@ -1,10 +1,10 @@
 "use strict";
-var express = require("express");
-var morgan = require("morgan");
-var bodyParser = require("body-parser");
-var routes_1 = require("./routes/routes");
-var errorHandlerApi_1 = require("./errorHandlerApi");
-var auth_1 = require("../auth");
+var express = require('express');
+var morgan = require('morgan');
+var bodyParser = require('body-parser');
+var routes_1 = require('./routes/routes');
+var errorHandlerApi_1 = require('./errorHandlerApi');
+var auth_1 = require('../auth');
 var Api = (function () {
     function Api() {
         this.express = express();

@@ -4,3 +4,4 @@ coverage
 client
 server/server.js
 package-lock.json
+dist

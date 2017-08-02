@@ -4,14 +4,13 @@ import User from './modules/User/service';
 const config = require('./config/env/config')();
 
 export default function AuthConfig() {
-  const UserService = new User();
   let opts = {
     secretOrKey: config.secret,
     jwtFromRequest: ExtractJwt.fromAuthHeader()
   };
 
   passport.use(new Strategy(opts, (jwtPayload, done) => {
-    UserService
+    User
       .getById(jwtPayload.id)
       .then(user => {
         if(user) {

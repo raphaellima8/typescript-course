@@ -5,6 +5,7 @@
     "outDir": "dist",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "allowJs": true,
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -14,6 +15,7 @@
   },
   "include": [
     "server/**/*.ts",
+    "server/**/*.json",
     "server/*.ts",
     "tests/**/*.ts"
   ],

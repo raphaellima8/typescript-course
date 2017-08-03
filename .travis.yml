@@ -1,0 +1,24 @@
+sudo: required
+language: node_js
+notifications:
+  email: raphael@raphaellima.site
+node_js:
+- 5.12
+services:
+- postgresql
+env:
+  global:
+  - NODE_ENV: test
+  - TRAVIS: true
+addons:
+  postgresql: "9.3"
+before_script:
+  - psql -c 'create database ts_api_test;' -U postgres
+  - npm i -g sequelize-cli
+  - cd server/
+  - sequelize db:migrate --env test
+  - npm install
+  - gulp
+script:
+  - npm run unit-test
+  - npm run integration-test

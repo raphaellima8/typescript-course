@@ -1,0 +1,20 @@
+sudo: required
+language: node_js
+notifications:
+  email: raphael@raphaellima.site
+node_js:
+- 5.12
+services:
+- postgresql
+env:
+  global:
+  - NODE_ENV: test
+  - TRAVIS: true
+addons:
+  postgresql: "9.3"
+before_script:
+  - psql -c 'create database api-test;' -U postgres
+  - npm install
+script:
+  - npm run unit-test
+  - npm run integration-test

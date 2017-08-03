@@ -2,8 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var helpers_1 = require("./config/helpers");
 var service_1 = require("../../server/modules/User/service");
+var model = require('../../server/models');
+model.sequelize.sync().then(function () { });
 describe('Testes Unitários do Service', function () {
-    var model = require('../../server/models');
     var email;
     var _id;
     var defaultUser = {

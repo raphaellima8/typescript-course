@@ -1,9 +1,10 @@
 import { testDouble, expect } from './config/helpers';
 import User from '../../server/modules/User/service';
+const model = require('../../server/models');
+model.sequelize.sync().then(() => {});
 
 describe('Testes Unitários do Service', () => {
 
-  const model = require('../../server/models');
   let email;
   let _id;
 

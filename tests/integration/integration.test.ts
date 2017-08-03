@@ -1,12 +1,14 @@
 import * as jwt from 'jwt-simple';
 import * as HTTPStatus from 'http-status';
 import { app, request, expect } from './config/helpers';
+const model = require('../../server/models');
+
+model.sequelize.sync().then(() => {});
 
 describe('Testes de Integração', () => {
 
   'use strict';
   const config = require('../../server/config/env/config')();
-  const model = require('../../server/models');
 
   let id;
   let token;

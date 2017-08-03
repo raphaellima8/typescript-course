@@ -13,7 +13,7 @@ describe('Testes Unitários do Service', function () {
         email: 'defaultuser@email.com',
         password: '1234'
     };
-    beforeEach(function (done) {
+    before(function (done) {
         model.User.destroy({
             where: {}
         })

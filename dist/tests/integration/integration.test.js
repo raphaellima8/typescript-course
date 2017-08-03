@@ -22,7 +22,7 @@ describe('Testes de Integração', function () {
         email: 'raphael@email.com',
         password: '123'
     };
-    beforeEach(function (done) {
+    before(function (done) {
         model.User.destroy({
             where: {}
         })

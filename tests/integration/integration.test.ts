@@ -27,7 +27,7 @@ describe('Testes de Integração', () => {
     password: '123'
   };
 
-  beforeEach((done) => {
+  before((done) => {
     model.User.destroy({
       where: {}
     })

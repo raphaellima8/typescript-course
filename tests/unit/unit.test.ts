@@ -15,7 +15,7 @@ describe('Testes Unitários do Service', () => {
     password: '1234'
   }
 
-  beforeEach((done) => {
+  before((done) => {
     model.User.destroy({
       where: {}
     })

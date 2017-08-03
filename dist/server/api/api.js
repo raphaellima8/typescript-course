@@ -21,7 +21,7 @@ var Api = (function () {
         this.router(this.express, this.auth);
     };
     Api.prototype.router = function (app, auth) {
-        new routes_1.default(app, auth);
+        routes_1.default.initRoutes(app, auth);
     };
     return Api;
 }());

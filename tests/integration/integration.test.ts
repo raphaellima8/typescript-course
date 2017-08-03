@@ -3,8 +3,6 @@ import * as HTTPStatus from 'http-status';
 import { app, request, expect } from './config/helpers';
 const model = require('../../server/models');
 
-model.sequelize.sync().then(() => {});
-
 describe('Testes de Integração', () => {
 
   'use strict';
@@ -27,7 +25,7 @@ describe('Testes de Integração', () => {
     password: '123'
   };
 
-  before((done) => {
+  beforeEach((done) => {
     model.User.destroy({
       where: {}
     })

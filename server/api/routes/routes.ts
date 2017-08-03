@@ -5,22 +5,19 @@ import TokenRoutes from '../../modules/auth/auth';
 class Routes {
 
   private tokenRoute;
-  private auth;
 
-  constructor(app: Application, auth: any) {
-    this.tokenRoute = new TokenRoutes();
-    this.auth = auth;
-    this.getRoutes(app);
+  constructor() {
+    this.tokenRoute = TokenRoutes;
   }
 
-  getRoutes(app: Application): void {
-    app.route('/api/users/all').all(this.auth.authenticate()).get(UserRoutes.index);
-    app.route('/api/users/create').all(this.auth.authenticate()).post(UserRoutes.create);
-    app.route('/api/users/:id').all(this.auth.authenticate()).get(UserRoutes.findOne);
-    app.route('/api/users/:id/update').all(this.auth.authenticate()).put(UserRoutes.update);
-    app.route('/api/users/:id/destroy').all(this.auth.authenticate()).delete(UserRoutes.destroy);
+  initRoutes(app: Application, auth: any): void {
+    app.route('/api/users/all').all(auth.authenticate()).get(UserRoutes.index);
+    app.route('/api/users/create').all(auth.authenticate()).post(UserRoutes.create);
+    app.route('/api/users/:id').all(auth.authenticate()).get(UserRoutes.findOne);
+    app.route('/api/users/:id/update').all(auth.authenticate()).put(UserRoutes.update);
+    app.route('/api/users/:id/destroy').all(auth.authenticate()).delete(UserRoutes.destroy);
     app.route('/token').post(this.tokenRoute.auth);
   }
 }
 
-export default Routes;
+export default new Routes();

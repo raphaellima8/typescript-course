@@ -1,7 +1,6 @@
 import { testDouble, expect } from './config/helpers';
 import User from '../../server/modules/User/service';
 const model = require('../../server/models');
-model.sequelize.sync().then(() => {});
 
 describe('Testes Unitários do Service', () => {
 
@@ -15,7 +14,7 @@ describe('Testes Unitários do Service', () => {
     password: '1234'
   }
 
-  before((done) => {
+  beforeEach((done) => {
     model.User.destroy({
       where: {}
     })

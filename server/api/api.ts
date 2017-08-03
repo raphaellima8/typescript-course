@@ -27,7 +27,7 @@ class Api {
   }
 
   private router(app: Application, auth: any): void {
-    new Routes(app, auth);
+    Routes.initRoutes(app, auth);
   }
 }
 

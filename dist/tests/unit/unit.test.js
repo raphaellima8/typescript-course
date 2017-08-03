@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var helpers_1 = require("./config/helpers");
 var service_1 = require("../../server/modules/User/service");
 var model = require('../../server/models');
-model.sequelize.sync().then(function () { });
 describe('Testes Unitários do Service', function () {
     var email;
     var _id;
@@ -13,7 +12,7 @@ describe('Testes Unitários do Service', function () {
         email: 'defaultuser@email.com',
         password: '1234'
     };
-    before(function (done) {
+    beforeEach(function (done) {
         model.User.destroy({
             where: {}
         })

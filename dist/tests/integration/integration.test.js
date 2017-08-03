@@ -4,7 +4,6 @@ var jwt = require("jwt-simple");
 var HTTPStatus = require("http-status");
 var helpers_1 = require("./config/helpers");
 var model = require('../../server/models');
-model.sequelize.sync().then(function () { });
 describe('Testes de Integração', function () {
     'use strict';
     var config = require('../../server/config/env/config')();
@@ -22,7 +21,7 @@ describe('Testes de Integração', function () {
         email: 'raphael@email.com',
         password: '123'
     };
-    before(function (done) {
+    beforeEach(function (done) {
         model.User.destroy({
             where: {}
         })

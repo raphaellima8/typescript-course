@@ -14,6 +14,7 @@ addons:
   postgresql: "9.3"
 before_script:
   - psql -c 'create database ts_api_test;' -U postgres
+  - psql -c 'CREATE TABLE Users (id serial NOT NULL, name character varying(255) NOT NULL, email character varying(255) NOT NULL, password character varying(255) NOT NULL, "createdAt" timestamp with time zone NOT NULL, "updatedAt" timestamp with time zone NOT NULL, CONSTRAINT "Users_pkey" PRIMARY KEY (id));' -U postgres
   - npm install
 script:
   - npm run unit-test

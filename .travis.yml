@@ -11,14 +11,21 @@ env:
   - NODE_ENV: test
   - TRAVIS: true
 addons:
-  postgresql: "9.3"
+  postgresql: '9.3'
 before_script:
-  - psql -c 'create database ts_api_test;' -U postgres
-  - npm i -g sequelize-cli gulp-cli
-  - cd server/
-  - sequelize db:migrate --env test
-  - npm install
-  - gulp
+- psql -c 'create database ts_api_test;' -U postgres
+- npm i -g sequelize-cli gulp-cli
+- cd server/
+- sequelize db:migrate --env test
+- npm install
+- gulp
 script:
-  - npm run unit-test
-  - npm run integration-test
+- npm run unit-test
+- npm run integration-test
+deploy:
+  provider: heroku
+  api_key:
+    secure: jJi63eziCPbJGNSGbHJRkLprRYqU+LnFWu8VyC6LZgiI+wVI6fxCwSCjRVHcygLIuC5Z8EsqY4KsT4xA2vvHcVPyM7tkIwX6/DKR8ZQpneczVm9awAPkXbQiXAu9vFOkbxZ98iF31johoCAGvjy29jD2+D7by5qk9dt3R1kxVJn2wP881rsv1YHfto9Q0ev49030KuQdYQGGTgMbgnACHkXJizqtg3OfagQ/GNIvAv+a3cqyrQN5D5WcjVf2B/q/fUMRyeSmXxlkg2RGKnPwiZZtcJQImqMfZwvGn2tztKV7+xhyZHKvkbmpPim0f2EmXFIVMpbv6c0cPiNGAbBYz5mofywHcf5HS3ihTJDTgEVGwejJizpaUqvDrE5h3P7RbPuEdeJgc1TbA1Puhje6BdnU7dXeeN1F8wXkA+QOTfPzZ7KLawsLZgBPk5figgcr1EzzUBQkVGmLe5i3GRW2tTSSXJRnZlWUN8aVfGHEjOHN1hKnHwFA4R4lXPkW7hl86brQuu8JNWdEqcD6o5bkImZJZTRmSbJiiO0wpC39iWWbYisgxwjTAX1F3RCcm6OkOhEurbsPJMJklXvmGP4xVcoq/0tbRWpFE/exQBcntau8wmoIxOPMO1QgYzGVNweBfA7Q8JNGJVkzZNwUmTqlSRQPXM/xiULBGTL6qb0xWw8=
+  app: typescript-course
+  on:
+    repo: raphaellima8/typescript-course

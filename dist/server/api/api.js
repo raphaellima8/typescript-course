@@ -9,7 +9,6 @@ var auth_1 = require("../auth");
 var Api = (function () {
     function Api() {
         this.express = express();
-        this.auth = auth_1.default();
         this.middleware();
     }
     Api.prototype.middleware = function () {
@@ -17,8 +16,8 @@ var Api = (function () {
         this.express.use(bodyParser.urlencoded({ extended: true }));
         this.express.use(bodyParser.json());
         this.express.use(handlers_1.default.errorHandlerApi);
-        this.express.use(this.auth.initialize());
-        this.router(this.express, this.auth);
+        this.express.use(auth_1.default.config().initialize());
+        this.router(this.express, auth_1.default);
     };
     Api.prototype.router = function (app, auth) {
         routes_1.default.initRoutes(app, auth);

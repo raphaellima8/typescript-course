@@ -28,4 +28,4 @@ deploy:
     secure: eYck6lAFnf7CTsThmjKRYRI/WarIo4LZ5NATPgDq6cDSahsHUCVwoSdBfJs/BJJlSvvBmQbTt3/t4fE+IhfU83I6/sCEjlD+dZyTpN6vxc1EfMJhr4oR/q/GarUgiz0KcV/tsxjbJaVXqe8lEhz1UGukM9J8QFXu64gMA1dJBUhqrMlX4XMCGx0h7eBcPL584coY9zsRZrChjbomWVDOueuR7Jk/LwnHSOlfTWxR73b9MbTPkkzHPZTunTjsx18kQ+XYeQabg8mxlgeCnnqKq5bXL5sfyHaRXVWtgXZ+wMVOLLKuj8a7qsqA12wXTUN/AOIGKNqG1EfUZ1zeLhNsd/p+ikDfqOhz7sthgFZ76iKXGApSJVBjLFcDkIli0WMzqNZlwQxi+uW57zpHFTamrXCitWRBum8mv2g/s67CjVy+j7eh1sSs+7ehJnJiuWV4kysiFuJf+05kO6rozPrY78yC5eQBwK4QQ2o7J/00g5BF57beI9MZCqk1m/ZFgep1IGYv6pkczPNsUiXT/0uBcP+XxSPzWsHTEFfHs4gZ4T4Od57VVAvD62fWkB/za1zRWXCeiQ/W0c2/KSOdxnrgZUgtZKUob+V6azOb1TgjCFGYibe6qKDMz1t/U49J2UPkjpWHLHpchucQjdEJXeZ/VbWtennZppebo7TWD9j9OIs=
   app: typescriipt-course
   on:
-    repo: https://git.heroku.com/typescriipt-course.git
+    repo: raphaellima8/typescript-course

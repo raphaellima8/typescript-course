@@ -17,6 +17,10 @@
     "Node",
     "Postgres"
   ],
+  "engines": {
+    "node": "~6.11.1",
+    "npm": "~3.10.9"
+  },
   "author": "Raphael Lima <raphael.aolima8@gmail.com>",
   "license": "ISC",
   "dependencies": {

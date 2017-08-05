@@ -22,11 +22,3 @@ before_script:
 script:
 - npm run unit-test
 - npm run integration-test
-deploy:
-  provider: heroku
-  api_key:
-    secure: eIcdYTXPlrd7wSw0y1mcWHF5I83powZiBPQtwH8SAxqaxE8vb7Yb59fXCW6aa+dXaL+8qc6GM0pDBvJqxcfxR5lv95UGqSekIRnkp/WuSkGLx7HTh4nIKZv7Kzp9oLgdIeuRlGcwB+I2Jn6LPxfzlwORHdgfD/WQA1VWq5JixkET4ly++P1L8Ixgx3UfLszJO1yk9rIx0uThkrWlIgFA3qe3ZIENDmX+3lbRCm9SbZOybAVzA8Nq/yeXzolOclKipdjjhv3qz96U5lbMIje0omrkObpbwkNa2o9T0yS3lGv9ZrSHt/3Ha+DLFN9Id1lHq/bbWAkPrR05g8ZAuBm6h6RF/94lc6tNsNHe5VfnIrk7EpsBg4jL8BIYYc2ftIhmjSoYJy2YMbQhlTzTvMvd8zNKUZ51dS8L3cVDeDUi+9DkhV3xvfaUY5IH/wCFKlSyczopNqc5raouVFxBLLRfOAzGP1N+bOjiU3U3mpQRyPrch+eFp6Zrj+o0dNHWqRO5jhGS6g6EPFxbLK9IBJE9GqczatjSsQq5sVOpglJGWMY/5LEzlRbEUyTkmvl8aF9jcjuAooudxammfzOD4hMM6mN7eKColK4tDTD+Q/H71VWOR28ZNdlA/YqQNQd+9EhLs1lkXNRalORsStEl9Fu3uysFXbuBZiZyrYmooQ6bh4g=
-  app: typescriipt-course
-  skip_cleanup: true
-  on:
-    repo: raphaellima8/typescript-course

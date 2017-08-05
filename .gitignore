@@ -5,3 +5,4 @@ client
 server/server.js
 package-lock.json
 script.txt
+tsconfig.json

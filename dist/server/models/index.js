@@ -12,10 +12,14 @@ if (config.dbURL) {
 else {
     var sequelize = new Sequelize(config.db, config.username, config.password);
 }
+console.log(__dirname);
 fs
     .readdirSync(__dirname)
     .filter(function (file) {
-    return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
+    var extension = '.js';
+    if (process.env.NODE_ENV == 'development')
+        extension = '.ts';
+    return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === "" + extension);
 })
     .forEach(function (file) {
     var model = sequelize['import'](path.join(__dirname, file));

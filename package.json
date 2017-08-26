@@ -4,7 +4,7 @@
   "description": "'API REST desenvolvida utilizando TypeScript'",
   "main": "./server/server.ts",
   "scripts": {
-    "start": "NODE_ENV=development ./node_modules/.bin/ts-node ./server/server.ts",
+    "start": "PORT=5000 NODE_ENV=development ./node_modules/.bin/ts-node ./server/server.ts",
     "builded": "PORT=5000 NODE_ENV=production node dist/server/server.js",
     "unit-test": "NODE_ENV=test mocha --opts mocha.opts ./dist/tests/unit/unit.test.js",
     "integration-test": "NODE_ENV=test mocha --opts mocha.opts ./dist/tests/integration/integration.test.js",
@@ -50,7 +50,7 @@
     "@types/lodash": "^4.14.71",
     "@types/mocha": "^2.2.41",
     "@types/morgan": "^1.7.32",
-    "@types/node": "^6.0.52",
+    "@types/node": "^6.0.88",
     "@types/passport": "^0.3.3",
     "@types/passport-jwt": "^2.0.19",
     "@types/sequelize": "^4.0.51",
@@ -67,6 +67,6 @@
     "supertest": "^3.0.0",
     "testdouble": "^2.1.2",
     "ts-node": "^3.3.0",
-    "typescript": "^2.5.0-dev.20170801"
+    "typescript": "^2.4.2"
   }
 }

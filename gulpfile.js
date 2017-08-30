@@ -9,15 +9,15 @@ gulp.task("compile", function () {
         .js.pipe(gulp.dest("dist"));
 });
 
-gulp.task("copy-opts", ['clean', 'compile'], function() {
-  return gulp.src('tests/unit/config/mocha.opts')
-             .pipe(gulp.dest('dist/tests/unit/config'))
-             .pipe(gulp.dest('dist/tests/integration/config'))
-});
-
 gulp.task("clean", function() {
   return gulp.src('dist')
              .pipe(clean());
+});
+
+gulp.task("copy-opts", function() {
+  return gulp.src('tests/unit/config/mocha.opts')
+             .pipe(gulp.dest('dist/tests/unit/config'))
+             .pipe(gulp.dest('dist/tests/integration/config'))
 });
 
 gulp.task("copy-migration-config", ['clean', 'compile', 'copy-opts'], function() {
@@ -25,7 +25,7 @@ gulp.task("copy-migration-config", ['clean', 'compile', 'copy-opts'], function()
              .pipe(gulp.dest('dist/server/config'))
 });
 
-gulp.task("build", ['clean', 'compile', 'copy-opts', 'copy-migration-config'], function() {
+gulp.task("build", ['copy-migration-config'], function() {
   return gulp.src('server/migrations/*')
              .pipe(gulp.dest('dist/server/migrations'))
 });

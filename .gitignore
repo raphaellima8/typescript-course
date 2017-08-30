@@ -1,8 +1,8 @@
 node_modules
 .nyc_output
 coverage
-client
 server/server.js
 package-lock.json
 script.txt
 .vscode
+client

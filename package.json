@@ -36,8 +36,8 @@
     "passport": "^0.3.2",
     "passport-jwt": "^2.2.1",
     "pg": "^6.1.5",
-    "sequelize": "^3.30.4",
-    "sequelize-cli": "^2.7.0"
+    "sequelize": "^4.17.2",
+    "sequelize-cli": "^3.0.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^1.0.0",

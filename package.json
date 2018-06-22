@@ -9,7 +9,9 @@
     "unit-test": "NODE_ENV=test mocha --opts mocha.opts ./dist/tests/unit/unit.test.js",
     "integration-test": "NODE_ENV=test mocha --opts mocha.opts ./dist/tests/integration/integration.test.js",
     "integration-coverage": "nyc --reporter=html npm run integration-test",
-    "unit-coverage": "nyc --reporter=html npm run unit-test"
+    "unit-coverage": "nyc --reporter=html npm run unit-test",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "API",
@@ -37,7 +39,8 @@
     "passport-jwt": "^2.2.1",
     "pg": "^6.1.5",
     "sequelize": "^3.30.4",
-    "sequelize-cli": "^2.7.0"
+    "sequelize-cli": "^2.7.0",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^1.0.0",
@@ -68,5 +71,6 @@
     "testdouble": "^2.1.2",
     "ts-node": "^3.3.0",
     "typescript": "^2.4.2"
-  }
+  },
+  "snyk": true
 }

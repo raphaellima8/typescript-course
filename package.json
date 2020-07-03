@@ -24,7 +24,7 @@
   "author": "Raphael Lima <raphael.aolima8@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^1.0.2",
+    "bcrypt": "^5.0.0",
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
